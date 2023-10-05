@@ -1,5 +1,5 @@
 #cabecalho{
-    height: 80px;
+    height: 50px;
     flex-direction: row;
     display:flex;
     justify-content: space-around;
@@ -39,7 +39,7 @@ a:hover{
     font-weight: bold;
 }
 .itens{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 #apresentacao{
@@ -47,6 +47,12 @@ a:hover{
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 50px;
+    align-items: center;
+}
+
+#tituloApresentacao{
+    color: #FF914D;
+    font-size: 40px;
 }
 
 #imagemApresentacao{
@@ -73,7 +79,7 @@ a:hover{
 
 #textoApresentacao{
 
-    font-size: 15px;
+    font-size: 20px;
     text-align: justify;
     display: flex;
     flex-wrap: wrap;
@@ -81,8 +87,7 @@ a:hover{
 
 #tituloServico{
     color: #FF914D;
-    font-size: 50px;
-
+    font-size: 40px;
 }
 
 #servico{
@@ -95,8 +100,9 @@ a:hover{
 }
 
 #tituloContato{
+    padding-top: 20px;
     color: #FF914D;
-    font-size: 50px;
+    font-size: 40px;
     margin-bottom: 40px;
 }
 
@@ -116,18 +122,26 @@ a:hover{
     border-radius: 10px;
 }
 .textoServico{
-    font-size: 25px;
+    font-size: 20px;
     color: #474646;
     font-weight: bolder;
 }
 
 
-#contato{
-    height: 400px;
+#contato{   
+    width: 100%;
+    height: 200px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 100px;
+}
+
+#textoContato{
+    font-size: 20px;
+    color: #474646;
+    font-weight: bolder;
 }
 
 .icones{
@@ -142,7 +156,7 @@ a:hover{
 }
 
 #rodape{
-    height: 80px;
+    height: 50px;
     justify-content: center;
     display: flex;
     background: rgb(255,222,80);
@@ -156,7 +170,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 600px;
+    height: 700px;
 }
 
 #form{
