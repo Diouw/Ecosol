@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Projeto1</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <header>
+        
+        <section id="cabecalho">
+            <a href="principal.html#cabecalho" class="itens">Ecosol</a>
+            <a href="principal.html#apresentacao" class="itens">Home </a>
+            <a href="principal.html#tituloServico" class="itens">Serviços </a>
+            <a href="principal.html#tituloContato" class="itens">Contato </a>
+            <a href="orcamento.html" class="itens">Orçamento </a>
+        </section>
+
+    </header>
+    
+    <body id="body">
+       <div id="corpo">
+            <h1>Faça seu orçamento!</h1>
+            <p>Conheça nossos planos de financiamento!</p>
+
+            <form id="form">
+                <label class="margem2" for="nome">NOME</label><br>
+                <input type="text" id="nome" name="nome" required><br>
+
+                <label class="margem2" for="email">EMAIL</label><br>
+                <input type="email" id="email" name="email" required><br>
+
+                <label class="margem2" for="estado">ESTADO</label><br>
+                <select id="estado">
+                    <option value="">Selecione</option>
+                    <option value="SP">SP</option>
+                    <option value="RJ">RJ</option>
+                    <option value="PR">PR</option>
+                </select>
+                
+                <label class="margem2" for="nome">QUAL O TIPO DO PROJETO?</label><br>
+                <select id="projeto">
+                    <option value="">Selecione</option>
+                    <option value="Residencial">Residencial</option>
+                    <option value="Condominio">Condominio</option>
+                    <option value="Empresas">Empresas</option>
+                </select>
+                <label class="margem2" for="valor">VALOR MEDIO DE ENERGIA?</label><br>
+                <input type="number" id="valor" name="valor" required><br>
+
+                <input class="margem3" type="submit" value="Enviar">
+            </form>
+
+        </div>
+
+    </body>
+    <footer id="rodape">
+        <p class="itens">Ecosol - 2023</p>
+    </footer>
+</html>
