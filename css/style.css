@@ -92,8 +92,9 @@ a:hover{
 
 #servico{
     width: 100%;
-    height: 650px;
+    height: 600px;
     flex-direction: column;
+    justify-content: center;
     display: flex;
     background-color: #D9D9D9;
 
@@ -158,6 +159,7 @@ a:hover{
 #rodape{
     height: 50px;
     justify-content: center;
+    align-items: center;
     display: flex;
     background: rgb(255,222,80);
     background: linear-gradient(90deg, rgba(255,222,80,1) 35%, rgba(255,145,77,1) 100%);
@@ -176,12 +178,26 @@ a:hover{
 #form{
     display: flex;
     flex-direction: column;
-    justify-content: end;
 }
 
 .margem2{
     margin-top: 10px;
 }
 .margem3{
-    margin-top: 20px;
+    margin-top: 30px;
 }
+.enviar{
+    margin-top: 30px;
+    width: 300px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.caixa{
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+}
+
