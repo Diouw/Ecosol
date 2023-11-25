@@ -21,7 +21,7 @@
     </header>
     
     <body id="body">
-       <div id="corpo">
+        <div id="corpo">
             <h1>Faça seu orçamento!</h1>
             <p>Conheça nossos planos de financiamento!</p>
 
@@ -52,9 +52,17 @@
 
                 <input class="enviar" type="submit" value="Entrar em contato">
             </form>
+                <p class="botaoRegistros" onclick="toggleRegistros()">Mostrar Registros</p>
 
+            <div id="registros">
+                <h1>Registros</h1>
+                <ul id="listaPessoas"></ul>
+            </div>
+            
+            
         </div>
 
+        <script src="script.js"></script>
     </body>
     <footer id="rodape">
         <p class="itens">Ecosol - 2023</p>
