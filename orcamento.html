@@ -44,7 +44,7 @@
                 <select id="projeto">
                     <option value="">Selecione</option>
                     <option value="Residencial">Residencial</option>
-                    <option value="Condominio">Condominio</option>
+                    <optsion value="Condominio">Condominio</option>
                     <option value="Empresas">Empresas</option>
                 </select>
                 <label class="margem3" for="valor">VALOR MEDIO DE ENERGIA?</label><br>
@@ -52,11 +52,13 @@
 
                 <input class="enviar" type="submit" value="Entrar em contato">
             </form>
+                <p class="botaoLimpar" onclick="limparCampos()">Limpar Campos</p>
                 <p class="botaoRegistros" onclick="toggleRegistros()">Mostrar Registros</p>
-
+                
             <div id="registros">
                 <h1>Registros</h1>
                 <ul id="listaPessoas"></ul>
+                <p class="delete-button" onclick="exclui()">Excluir todos os registros</p>
             </div>
             
             

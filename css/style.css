@@ -246,3 +246,12 @@ li {
     background-color: rgb(85, 98, 111);
 }
 
+.botaoLimpar{
+    width: 300px;
+    height: 30px;
+    background-color: rgb(26, 130, 118);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+}

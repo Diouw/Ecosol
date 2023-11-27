@@ -5,8 +5,8 @@ var listaPessoas = []; //Comando que cria uma variável listaPessoas e a inicial
 var count = 1;
 
 // Função para adicionar um novo paciente
-function addPessoa(nome, valor) {
-  var newPessoa = { id: count++, nome: nome, valor: valor }; //cria um novo objetivo de paciente (newPessoa), com as propriedades id, nome e valor
+function addPessoa(nome, valor, email, estado, projeto) {
+  var newPessoa = { id: count++, nome: nome, valor: valor, email:email, estado:estado, projeto:projeto }; //cria um novo objetivo de paciente (newPessoa), com as propriedades id, nome e valor
   listaPessoas.push(newPessoa); //comando que adiciona o novo paciente ao final da lista de pacientes
   localStorage.setItem('listaPessoas', JSON.stringify(listaPessoas)); //o JSON.stringfy converte o objeto JavaScript em uma string JSON
   renderlistaPessoas();
@@ -25,6 +25,13 @@ function excluiPessoa(pessoaId) {
   } else {
     alert('Paciente não encontrado.');
   }
+}
+
+function exclui(){
+  var listaVazia = [];
+  listaPessoas = listaVazia;
+  localStorage.setItem('listaPessoas', JSON.stringify(listaPessoas));
+  renderlistaPessoas(); 
 }
 
 // Função para recuperar a lista de pacientes do localStorage
@@ -57,10 +64,39 @@ document.getElementById('form').addEventListener('submit', function (event) {
   event.preventDefault();
   var nomeInput = document.getElementById('nome');
   var valorInput = document.getElementById('valor');
-  addPessoa(nomeInput.value, parseInt(valorInput.value));
+  var emailInput = document.getElementById('email');
+  var estadoInput = document.getElementById('estado');
+  var projetoInput = document.getElementById('projeto');
+
+  if(estadoInput.value == '' && projetoInput.value == ''){
+    alert('Selecione os campos de estado e de projeto');
+  }
+  else if(estadoInput.value == ''){
+    alert('Selecione o campo de estado');
+  }
+  else if(projetoInput.value == ''){
+    alert('Selecione o campo de projeto');
+  }
+  else{
+    alert('Cadastro realizado!');
+    addPessoa(nomeInput.value, parseInt(valorInput.value), emailInput.value, estadoInput.value, projetoInput.value);
+  }
+});
+
+function limparCampos (){
+  var nomeInput = document.getElementById('nome');
+  var valorInput = document.getElementById('valor');
+  var emailInput = document.getElementById('email');
+  var estadoInput = document.getElementById('estado');
+  var projetoInput = document.getElementById('projeto');
   nomeInput.value = '';
   valorInput.value = '';
-});
+  emailInput.value = '';
+  estadoInput.value = '';
+  projetoInput.value = '';
+} 
+
+
 
 function addData(){
     const date = new Date();
