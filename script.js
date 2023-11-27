@@ -97,8 +97,6 @@ function limparCampos (){
   projetoInput.value = '';
 } 
 
-
-
 function addData(){
     const date = new Date();
     let data = date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear();

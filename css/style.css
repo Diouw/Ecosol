@@ -248,8 +248,10 @@ li {
     background-color: lightslategray;
     color: white;
     font-weight: bold;
-    text-align: center;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .botaoRegistros:hover {
@@ -262,8 +264,11 @@ li {
     background-color: rgb(26, 130, 118);
     color: white;
     font-weight: bold;
-    text-align: center;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .botaoLimpar:hover {
