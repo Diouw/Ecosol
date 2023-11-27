@@ -57,6 +57,20 @@
                 
             <div id="registros">
                 <h1>Registros</h1>
+                
+                <div>
+                    <input type="radio" id="checkboxNome" name="pesquisa" value="nome" onchange="pesquisar()">
+                    <label for="checkboxNome">Pesquisar por Nome</label>
+               
+                    <input type="radio" id="checkboxEmail" name="pesquisa" value="email" onchange="pesquisar()">
+                    <label for="checkboxEmail">Pesquisar por Email</label>
+                
+                    <input type="radio" id="checkboxValor" name="pesquisa" value="valor" onchange="pesquisar()">
+                    <label for="checkboxValor">Pesquisar por Valor</label>
+                </div>
+                  
+                <input type="text" id="inputPesquisa" placeholder="Digite aqui" oninput="pesquisar()">
+                  
                 <ul id="listaPessoas"></ul>
                 <p class="delete-button" onclick="exclui()">Excluir todos os registros</p>
             </div>

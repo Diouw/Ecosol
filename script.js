@@ -22,6 +22,7 @@ function excluiPessoa(pessoaId) {
     listaPessoas = updatedlistaPessoas;
     localStorage.setItem('listaPessoas', JSON.stringify(listaPessoas)); 
     renderlistaPessoas();
+    pesquisar();
   } else {
     alert('Paciente não encontrado.');
   }
@@ -115,4 +116,47 @@ function toggleRegistros(){
         lista.style.display = "none"; // Oculta a lista se estiver visível
         botao.textContent = "Mostrar Registros";
     }
+}
+
+function pesquisar() {
+  var checkboxes = document.querySelectorAll('input[type="radio"]:checked'); // Obtém todos os checkboxes marcados
+  var inputValor = document.getElementById('inputPesquisa').value.toLowerCase(); // Obtém o valor do campo de pesquisa em letras minúsculas
+
+  var criterios = Array.from(checkboxes).map(function(checkbox) {
+    return checkbox.value; // Obtém os valores dos checkboxes marcados
+  });
+
+  var resultados;
+ 
+  if (criterios.includes('nome')) {
+    resultados = listaPessoas.filter(function (pessoa) {
+      return pessoa.nome.toLowerCase().includes(inputValor); // Realiza a pesquisa pelo nome
+    });
+  } 
+  else if (criterios.includes('email')) {
+    resultados = listaPessoas.filter(function (pessoa) {
+      return pessoa.email.toLowerCase().includes(inputValor); // Realiza a pesquisa pelo email
+    });
+  }
+  else if (criterios.includes('valor')) {
+    resultados = listaPessoas.filter(function (pessoa) {
+      return pessoa.valor.toString().includes(inputValor); // Realiza a pesquisa pelo email
+    });
+  }
+
+
+  renderizarResultados(resultados); // Renderiza os resultados da pesquisa
+}
+
+
+
+function renderizarResultados(resultados) {
+  var listaPessoasElement = document.getElementById('listaPessoas');
+  listaPessoasElement.innerHTML = ''; // Limpa o conteúdo HTML do elemento listaPessoasElement
+
+  resultados.forEach(function (pessoa) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = '<span class="listaPessoas">' + addData() + ' - ' + pessoa.nome + '</span> (Valor da conta: ' + pessoa.valor + ') <button class="delete-button" onclick="excluiPessoa(' + pessoa.id + ')">Excluir</button>';
+    listaPessoasElement.appendChild(listItem);
+  });
 }
