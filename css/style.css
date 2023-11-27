@@ -234,7 +234,7 @@ li {
 
 #registros{
     padding-top: 100px;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     width: 500px;

@@ -110,7 +110,7 @@ function toggleRegistros(){
     var botao = document.querySelector(".botaoRegistros");
 
     if (lista.style.display === "none" || lista.style.display === "") {
-        lista.style.display = "block"; // Mostra a lista se estiver oculta
+        lista.style.display = "flex"; // Mostra a lista se estiver oculta
         botao.textContent = "Fechar Registros";
     } else {
         lista.style.display = "none"; // Oculta a lista se estiver visível
